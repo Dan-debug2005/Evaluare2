@@ -1,0 +1,287 @@
+/* Setări globale */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+/* Header */
+header {
+    background-color: black;
+    color: gray;
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+    border: 2px solid black;
+    width: 80%;
+    margin: 20px auto;
+    border-radius: 10px;
+    position: relative;
+}
+
+header a {
+    color: #FFD700;
+    text-decoration: underline;
+    display: block;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.email {
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    font-size: 18px;
+    color: #FFD700;
+}
+
+/* Secțiuni principale */
+.main-box {
+    margin: 20px auto;
+    width: 80%;
+    background-color: #e6e6ff;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+/* Secțiune slideshow */
+.slideshow-box {
+    margin: 20px auto;
+    width: 80%;
+    background-color: #5F7785;
+    padding: 20px;
+    border: 2px solid purple;
+    border-radius: 10px;
+}
+
+/* Titluri */
+h2 {
+    font-size: 18px;
+    color: purple;
+    text-decoration: underline;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* Lista */
+ul {
+    margin: 20px 0;
+    padding-right: 20px;
+    text-align: right;
+    list-style-position: inside;
+}
+
+ul li {
+    list-style-type: disc;
+    color: black;
+}
+
+/* Slideshow */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slide {
+    display: none;
+    text-align: center;
+}
+
+.slide img {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 10px;
+    opacity: 0.9; /* Opacitatea imaginii */
+    transition: opacity 0.3s ease;
+}
+
+.slide img:hover {
+    opacity: 1; /* Opacitatea se mărește la hover */
+}
+
+.active {
+    display: block;
+}
+
+/* Butoane pentru slideshow */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 10px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Stil pentru mutarea titlurilor */
+.title-offset {
+    margin-left: 3cm;
+}
+
+/* Tabel */
+table {
+    width: 70%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table th, table td {
+    border: 3px solid orange;
+    padding: 8px;
+    text-align: center;
+    background-color: #a6a6a6;
+}
+
+table th {
+    color: #FFD700; /* Culoare galbenă pentru antet */
+}
+
+/* Stil pentru imagini */
+.image-container img {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 10px;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.image-container img:hover {
+    opacity: 1;
+
+
+
+    .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .slide {
+            display: none;
+            position: absolute;
+            width: 100%;
+        }
+
+        .slide img {
+            width: 100%;
+            height: auto;
+        }
+
+        .active {
+            display: block;
+        }
+
+        .slideshow-container:hover .prev,
+        .slideshow-container:hover .next {
+            opacity: 1;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            opacity: 0;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev {
+            left: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        /* Stil pentru textul indicativ */
+p {
+    margin: 10px 0;
+    font-size: 14px;
+    text-align: center;
+    color: gray;
+}
+
+/* Slideshow ajustări */
+.slideshow-container {
+    position: relative;
+    max-width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.slide {
+    display: none;
+    text-align: center;
+}
+
+.slide.active {
+    display: block;
+}
+}
+ // Script pentru slideshow
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.slideshow .slide');
+        const slideshowContainer = document.querySelector('.slideshow');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.display = i === index ? 'block' : 'none';
+            });
+        }
+
+        function startSlideshow() {
+            setInterval(() => {
+                slideIndex = (slideIndex + 1) % slides.length;
+                showSlide(slideIndex);
+            }, 3000); // Timp de tranziție de 3 secunde
+        }
+
+        // Funcție de dublu click pentru a înlocui imaginea cu slideshow
+        document.getElementById('monitorizare-resurse').addEventListener('dblclick', function() {
+            const imageContainer = document.querySelector('.image-container');
+            imageContainer.style.display = 'none'; // Ascunde imaginile originale
+            slideshowContainer.style.display = 'flex'; // Afișează slideshow-ul
+            startSlideshow(); // Start slideshow
+        });
+
+        // Inițializare slideshow
+        showSlide(slideIndex);
